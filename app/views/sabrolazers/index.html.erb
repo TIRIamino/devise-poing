@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sabrolazers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Level</th>
+      <th>Color</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sabrolazers.each do |sabrolazer| %>
+      <tr>
+        <td><%= sabrolazer.title %></td>
+        <td><%= sabrolazer.level %></td>
+        <td><%= sabrolazer.color %></td>
+        <td><%= link_to 'Show', sabrolazer %></td>
+        <td><%= link_to 'Edit', edit_sabrolazer_path(sabrolazer) %></td>
+        <td><%= link_to 'Destroy', sabrolazer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sabrolazer', new_sabrolazer_path %>

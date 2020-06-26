@@ -1,0 +1,2 @@
+class Sabrolazer < ApplicationRecord
+end
